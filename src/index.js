@@ -1,6 +1,6 @@
 import './App.scss';
 import Logo from './assets/webpack-logo.png';
-import rotate from './rotate.js';
+import startRotation from './rotate.js';
 
 function welcomeComponent(){
 
@@ -19,7 +19,7 @@ function welcomeComponent(){
   
   const button = document.createElement('button');
   button.innerHTML = 'ROTATE ME';
-  button.onclick = rotate;
+  button.onclick = () => startRotation(logo);
 
   welcomeComponent.appendChild(button);
   return welcomeComponent;
