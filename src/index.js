@@ -1,27 +1,25 @@
 import './App.scss';
 import Logo from './assets/webpack-logo.png';
 
-function welcomeComponent(){
+const welcomeComponent = () => {
 
-  const welcomeComponent = document.createElement('div');
-  welcomeComponent.classList.add('welcome');
+  const div = document.createElement('div');
+  div.className = 'placeholder';
 
-  const logoContainer = document.createElement('div');
-  logoContainer.classList.add('logo');
-  const logo = new Image();
-  logo.src = Logo;
-  welcomeComponent.appendChild(logoContainer);
+  const image = document.createElement('img');
 
-  const welcomeText = document.createElement('p');
-  welcomeText.textContent = 'Hello Webpack!';
-  welcomeComponent.appendChild(welcomeText);
-  
-  const button = document.createElement('button');
-  button.innerHTML = 'ROTATE ME';
-  button.onclick = () => startRotation(logo);
+  image.src = Logo;
 
-  welcomeComponent.appendChild(button);
-  return welcomeComponent;
-};
+  div.appendChild(image);
+
+  const h1 = document.createElement('h1');
+  h1.textContent = 'Hello Webpack'
+
+  div.appendChild(h1);
+
+  return div;
+}
+
+
 
 document.body.appendChild(welcomeComponent());
