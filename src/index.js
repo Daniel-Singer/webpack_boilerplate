@@ -1,6 +1,5 @@
 import './App.scss';
 import Logo from './assets/webpack-logo.png';
-import startRotation from './rotate.js';
 
 function welcomeComponent(){
 

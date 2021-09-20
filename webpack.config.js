@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode:'development',
   entry: {
-    index: './src/index.js',
-    rotate: './src/rotate.js'
+    index: path.resolve(__dirname, 'src', 'index.js')
   },
   devtool: 'inline-source-map',
   devServer: {
