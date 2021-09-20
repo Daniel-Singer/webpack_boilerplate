@@ -13,7 +13,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack Boilerplare'
+      title: 'Webpack Boilerplare',
+      template: path.resolve(__dirname, 'src', 'index.html')
     }),
   ],
   output: {
